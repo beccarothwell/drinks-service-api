@@ -1,5 +1,5 @@
 import request from "supertest";
-import { app } from "../app";
+import { app } from "../../app";
 
 test("GET /coffee should return correct object", async () => {
   const res = await request(app).get("/coffee").query({ coffeeName: "Latte" });
@@ -37,4 +37,10 @@ test("GET /coffee should return correct object with default coffeeName", async (
     drinkType: "Coffee",
     name: "Latte",
   });
+});
+
+test("GET /coffeelover should return correct message", async () => {
+  const res = await request(app).get("/coffeelover");
+  expect(res.statusCode).toEqual(200);
+  expect(res.text).toEqual("I like coffee!");
 });
