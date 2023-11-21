@@ -42,3 +42,9 @@ test("GET /tealover should return correct message", async () => {
   expect(res.statusCode).toEqual(200);
   expect(res.text).toEqual("I like tea!");
 });
+
+test("GET /picard should return correct message", async () => {
+  const res = await request(app).get("/picard");
+  expect(res.statusCode).toEqual(200);
+  expect(res.text).toEqual("Tea, Earl Grey, Hot.");
+});

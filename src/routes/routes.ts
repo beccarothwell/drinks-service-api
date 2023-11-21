@@ -6,6 +6,8 @@ export const router = express.Router();
 
 router.get("/coffee", coffeeController.getCoffee);
 router.get("/coffeelover", coffeeController.loveCoffee);
+router.get("/janeway", coffeeController.replicateCoffee);
 
 router.get("/tea", teaController.getTea);
 router.get("/tealover", teaController.loveTea);
+router.get("/picard", teaController.replicateTea);

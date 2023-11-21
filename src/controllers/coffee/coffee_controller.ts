@@ -14,3 +14,8 @@ export const loveCoffee = async (req: Request, res: Response) => {
   const coffeeLover = "I like coffee!";
   res.send(coffeeLover).status(200);
 };
+
+export const replicateCoffee = async (req: Request, res: Response) => {
+  const janeway = "There's coffee in that nebula!";
+  res.send(janeway).status(200);
+};

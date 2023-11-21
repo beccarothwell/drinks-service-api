@@ -14,3 +14,8 @@ export const loveTea = async (req: Request, res: Response) => {
   const teaLover = "I like tea!";
   res.send(teaLover).status(200);
 };
+
+export const replicateTea = async (req: Request, res: Response) => {
+  const picard = "Tea, Earl Grey, Hot.";
+  res.send(picard).status(200);
+};

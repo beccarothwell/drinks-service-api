@@ -44,3 +44,9 @@ test("GET /coffeelover should return correct message", async () => {
   expect(res.statusCode).toEqual(200);
   expect(res.text).toEqual("I like coffee!");
 });
+
+test("GET /janeway should return correct message", async () => {
+  const res = await request(app).get("/janeway");
+  expect(res.statusCode).toEqual(200);
+  expect(res.text).toEqual("There's coffee in that nebula!");
+});
